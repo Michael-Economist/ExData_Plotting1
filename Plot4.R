@@ -35,14 +35,14 @@ par(mfrow=c(2,2))
 
 
 plot(ds$Global_active_power ~ ds$Datetime, type = "l", ylab = "Global Active Power (kilowatts)", xlab = "")
-plot(ds$Voltage ~ ds$Datetime, type = "l", ylab = "Voltage (volt)", xlab = "")
+plot(ds$Voltage ~ ds$Datetime, type = "l", ylab = "Voltage (volt)", xlab = "datetime")
 
 plot(ds$Sub_metering_1 ~ ds$Datetime, type = "l", ylab = "Energy sub metering", xlab = "")
 lines(ds$Datetime, ds$Sub_metering_2, col="red")
 lines(ds$Datetime, ds$Sub_metering_3, col="blue")
 legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1, lwd=2.5, col=c("black", "red", "blue"))
 
-plot(ds$Global_reactive_power ~ ds$Datetime, type = "l", ylab = "Global Reactive Power (kilowatts)", xlab = "")
+plot(ds$Global_reactive_power ~ ds$Datetime, type = "l", ylab = "Global Reactive Power (kilowatts)", xlab = "datetime")
 
 
 dev.off()
